@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RecipeDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivAuthorAvatar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_launcher_background" />
+
+
+            <TextView
+                android:id="@+id/tvAuthorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_weight="1"
+                android:text="username" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:text="01/01/2020" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:layout_weight="6"
+                    android:text="Title"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:layout_weight="6"
+                    android:text="Description"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginVertical="4dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:text="Cooking time:"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="minutes"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:layout_weight="6"
+                    android:text="Difficulty"
+                    android:textSize="16sp" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:transformPivotX="0dp" />
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_image_24" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:id="@+id/llIngr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:text="Ingredients"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvIngr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:padding="12dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="10"
+                    android:text="Steps"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvSteps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:padding="12dp"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:id="@+id/llComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivCurrentAvatar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_baseline_person_24" />
+
+                <EditText
+                    android:id="@+id/edComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="add a comment"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/btSend"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="@color/md_orange_200"
+                    android:src="@drawable/ic_baseline_send_24" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvComment"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginHorizontal="8dp"
+            android:clipToPadding="false"
+            android:paddingBottom="32dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp">
+
+            <ImageView
+                android:id="@+id/uploadImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_image_24" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:layout_weight="6"
+                    android:text="Title"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:hint="title" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:layout_weight="6"
+                    android:text="Description"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edDesrciption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:hint="description" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:layout_weight="6"
+                    android:text="Cooking time"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:layout_weight="1"
+                        android:focusable="true"
+                        android:hint="cooking time"
+                        android:inputType="number"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/edDesciption" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:text="minutes"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:layout_weight="6"
+                    android:text="Difficulty"
+                    android:textSize="16sp" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:transformPivotX="0dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:id="@+id/llIngr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:text="Ingredients"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edIngr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:id="@+id/llStep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:text="Steps"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edSteps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

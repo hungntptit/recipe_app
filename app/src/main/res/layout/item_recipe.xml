@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:padding="4dp"
+                android:text="Ten mon an Ten mon an Ten mon an Ten mon an Ten mon an Ten mon an Ten mon an "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/imgTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
+
+            <ImageView
+                android:id="@+id/imgTime"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_baseline_timer_24"
+                app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+                app:layout_constraintEnd_toStartOf="@+id/tvTime"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgFav"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="30 minutes"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+                app:layout_constraintStart_toEndOf="@+id/imgTime" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="4dp"
+                android:layout_marginBottom="4dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:text="username"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2022-01-01"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

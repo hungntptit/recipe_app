@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Recipe</string>
+    <string-array name="sort">
+        <item>date ascending</item>
+        <item>date descending</item>
+        <item>cooking time ascending</item>
+        <item>cooking time descending</item>
+        <item>difficulty ascending</item>
+        <item>difficulty descending</item>
+    </string-array>
+</resources>
